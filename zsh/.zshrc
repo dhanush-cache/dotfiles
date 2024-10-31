@@ -5,6 +5,7 @@
 export ZELLIJ_AUTO_EXIT="true"
 eval "$(zellij setup --generate-auto-start zsh)"
 
+source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
