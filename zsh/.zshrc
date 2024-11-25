@@ -28,6 +28,8 @@ zinit snippet OMZP::python
 # zinit snippet OMZP::sudo
 zinit snippet OMZP::archlinux
 zinit snippet OMZP::aliases
+zinit snippet OMZP::pipenv 2> /dev/null
+zinit snippet OMZP::pass/_pass 2> /dev/null
 zinit snippet OMZP::command-not-found
 zinit snippet OMZ::lib/directories.zsh
 zinit snippet OMZ::lib/key-bindings.zsh
@@ -78,8 +80,7 @@ clear-screen() {
   for precmd in $precmd_functions; do
     $precmd
   done
-  zle .clear-screen
-  zle .clear-screen
+  printf "\e[H\e[3J"
 }
 zle -N clear-screen clear-screen
 
@@ -91,3 +92,7 @@ export FZF_DEFAULT_OPTS=" \
 --multi"
 
 zstyle ':fzf-tab:*' fzf-flags ${(z)FZF_DEFAULT_OPTS}
+export EDITOR=nvim
+export VISUAL=nvim
+
+source ~/.profile
