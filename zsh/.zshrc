@@ -66,15 +66,7 @@ alias ls="ls --color"
 source <(fzf --zsh)
 eval "$(zoxide init --cmd cd zsh)"
 
-# reset-prompt() {
-#   local precmd
-#   for precmd in $precmd_functions; do
-#     $precmd
-#   done
-#   zle .reset-prompt
-# }
-# zle -N reset-prompt reset-prompt
-#
+
 clear-screen() {
   local precmd
   for precmd in $precmd_functions; do
